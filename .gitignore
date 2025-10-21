@@ -1,0 +1,4 @@
+.DS_Store
+# Cabal output
+dist-newstyle/
+*.prof
