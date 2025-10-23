@@ -1,8 +1,8 @@
 # Haskell SCDMA PoC
 An interesting usecase for functional programming.
 
-This project uses Cabal for building and running the executable.
-Install Cabal here: https://www.haskell.org/cabal/ \
+This project uses Cabal for building and running the executable. \
+Install Cabal here: https://www.haskell.org/cabal/
 
 ## Run Simulator
 Runs a simulator that multiplexes and then demultiplexes messages for multiple senders, see [here](app/Main.hs).
