@@ -1,0 +1,4 @@
+packages: .
+optimization: 2
+package scdma
+  ghc-options: -O2 -split-sections
