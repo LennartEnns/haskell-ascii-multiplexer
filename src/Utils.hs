@@ -11,8 +11,8 @@ opZipLists op = foldl combine []
     combine (x:xs) (y:ys) = op x y : combine xs ys
 
 -- Calculates a normalized dot product (divided by vector dimension)
-normalizedDotProduct :: [Int8] -> [Int8] -> Int
-normalizedDotProduct a b = fromIntegral (dotProduct a b) `quot` n
+normalizedDotProduct :: [Int8] -> [Int8] -> Int8
+normalizedDotProduct a b = fromIntegral (dotProduct a b) `quot` fromIntegral n
   where n = max (length a) (length b)
 
 -- Calculates a dot product

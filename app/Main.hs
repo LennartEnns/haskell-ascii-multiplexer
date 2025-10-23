@@ -22,11 +22,13 @@ main = do
             let numTrans = length msgs
             transCodes <- generateCodes numTrans
             let muxSignal = multiplex (zip msgs transCodes)
-            let demuxMsgs = demultiplex transCodes muxSignal
+            let demuxMsgs = demultiplex muxSignal transCodes
 
+            putStrLn ("Messages before transmission: " ++ show msgs ++ "\n")
             putStrLn ("Randomized transmitter codes: " ++ show transCodes ++ "\n")
             putStrLn ("Multiplexed signal: " ++ show muxSignal ++ "\n")
             putStrLn ("Demuxed messages: " ++ show demuxMsgs)
+            exitSuccess
         _ -> do
             putStrLn "Usage:"
             putStrLn "  myprog -f <messages-file>"
